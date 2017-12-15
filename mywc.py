@@ -7,7 +7,7 @@ from typing import Dict
 if not sys.argv[1:]:
     raise RuntimeError('Usage: wordfreq FILE')
 
-dd = {}
+dd = {}  # type: Dict[str, str]
 
 with open(sys.argv[1]) as f:
     for s in f:
