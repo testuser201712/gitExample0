@@ -12,7 +12,8 @@ dd = {}
 with open(sys.argv[1]) as f:
     for s in f:
         for word in re.sub('\W', ' ', s).split():
-            dd[word] = dd.get(word, 0) + 1
+            w2 = word.lower()
+            dd[w2] = dd.get(w2, 0) + 1
             
 # Use list comprehension
 l = [(freq, word) for word, freq in dd.items()]
